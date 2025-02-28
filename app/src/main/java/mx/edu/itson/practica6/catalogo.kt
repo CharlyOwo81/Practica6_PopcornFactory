@@ -175,6 +175,7 @@ class PeliculaAdapter: BaseAdapter {
         image.setImageResource(pelicula.image)
         title.setText(pelicula.titulo)
 
+        //Comentario de prueba
         image.setOnClickListener {
             val intento = Intent(context,detalle_pelicula::class.java)
             intento.putExtra("titulo", pelicula.titulo)
