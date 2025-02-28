@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -30,10 +29,12 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/yellow"
+            android:textColor="@color/yellow"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="33dp"/>
 
     </LinearLayout>
+
     <GridView
         android:id="@+id/movies_catalogo"
         android:layout_width="match_parent"
@@ -41,6 +42,7 @@
         android:numColumns="3"
         android:layout_marginTop="18dp"
         android:paddingHorizontal="6dp"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,6 +52,7 @@
             android:layout_width="250dp"
             android:layout_height="2dp"
             android:background="@color/yellow"
+            android:textColor="@color/yellow"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="33dp"/>
         <TextView
@@ -64,4 +67,12 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"/>
     </LinearLayout>
+
+    <GridView
+        android:id="@+id/series_catalogo"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:numColumns="3"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="6dp"/>
 </LinearLayout>

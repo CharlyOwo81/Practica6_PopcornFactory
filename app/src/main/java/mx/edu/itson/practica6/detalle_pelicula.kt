@@ -23,7 +23,6 @@ class detalle_pelicula : AppCompatActivity() {
             iv_pelicula_image.setImageResource(bundle.getInt("header"))
             tv_nombre_pelicula.setText(bundle.getString("titulo"))
             tv_pelicula_desc.setText(bundle.getString("sinopsis"))
-
         }
     }
 }
