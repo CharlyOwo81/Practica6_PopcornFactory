@@ -40,5 +40,11 @@
             android:text="Aqui la descripcion de la pelicula"
             android:textColor="@color/yellow"
             android:gravity="center"/>
+
+        <Button>
+            android:id="@+id/buyTickets"
+            android:layout_width="wrap_content"
+
+        </Button>
     </LinearLayout>
 </LinearLayout>
