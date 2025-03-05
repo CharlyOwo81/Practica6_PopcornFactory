@@ -172,18 +172,20 @@ class PeliculaAdapter: BaseAdapter {
         var image: ImageView = vista.findViewById(R.id.image_movie_cell)
         var title: TextView = vista.findViewById(R.id.movie_title_cell)
 
+
+
         image.setImageResource(pelicula.image)
         title.setText(pelicula.titulo)
 
         //Comentario de prueba
         image.setOnClickListener {
-            val intento = Intent(context,detalle_pelicula::class.java)
-            intento.putExtra("titulo", pelicula.titulo)
-            intento.putExtra("imagen", pelicula.image)
-            intento.putExtra("header", pelicula.header)
-            intento.putExtra("sinopsis", pelicula.sinopsis)
-            intento.putExtra("numberSeats", (20-pelicula.seats.size))
-            context!!.startActivity(intento)
+            val intent = Intent(context,detalle_pelicula::class.java)
+            intent.putExtra("titulo", pelicula.titulo)
+            intent.putExtra("imagen", pelicula.image)
+            intent.putExtra("header", pelicula.header)
+            intent.putExtra("sinopsis", pelicula.sinopsis)
+            intent.putExtra("numberSeats", (20-pelicula.seats.size))
+            context!!.startActivity(intent)
         }
         return vista
     }
