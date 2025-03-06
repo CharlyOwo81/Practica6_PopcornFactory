@@ -10,10 +10,9 @@ import android.widget.BaseAdapter
 import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import mx.edu.itson.practica6.R.layout
+import mx.edu.itson.practica6.R.layout.pelicula
 
 class catalogo : AppCompatActivity() {
     var adapter: PeliculaAdapter? =null
@@ -23,7 +22,7 @@ class catalogo : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_catalogo)
+        setContentView(layout.activity_catalogo)
 
         cargarPeliculas()
         cargarSeries()
@@ -165,23 +164,22 @@ class PeliculaAdapter: BaseAdapter {
         return p0.toLong()
     }
 
-    override fun getView(pe: Int, p1: View?, p2: ViewGroup?): View {
-        var pelicula = peliculas[pe]
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        var pelicula = peliculas[position]
         var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        var vista = inflator.inflate(R.layout.pelicula,null)
+        var vista = inflator.inflate(layout.pelicula,null)
         var image: ImageView = vista.findViewById(R.id.image_movie_cell)
         var title: TextView = vista.findViewById(R.id.movie_title_cell)
 
 
-
         image.setImageResource(pelicula.image)
-        title.setText(pelicula.titulo)
+        title.setText(pelicula.nombre)
 
         //Comentario de prueba
-        image.setOnClickListener {
-            val intent = Intent(context,detalle_pelicula::class.java)
-            intent.putExtra("titulo", pelicula.titulo)
-            intent.putExtra("imagen", pelicula.image)
+        image.setOnClickListener() {
+            var intent = Intent(context, DetallePelicula::class.java)
+            intent.putExtra("nombre", pelicula.nombre)
+            intent.putExtra("image", pelicula.image)
             intent.putExtra("header", pelicula.header)
             intent.putExtra("sinopsis", pelicula.sinopsis)
             intent.putExtra("numberSeats", (20-pelicula.seats.size))
@@ -189,5 +187,4 @@ class PeliculaAdapter: BaseAdapter {
         }
         return vista
     }
-
 }

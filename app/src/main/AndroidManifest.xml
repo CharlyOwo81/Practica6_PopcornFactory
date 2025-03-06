@@ -19,7 +19,7 @@
             android:name=".catalogo"
             android:exported="false" />
         <activity
-            android:name=".detalle_pelicula"
+            android:name=".DetallePelicula"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

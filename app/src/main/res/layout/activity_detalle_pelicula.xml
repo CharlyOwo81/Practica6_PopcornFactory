@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/black"
-    tools:context=".detalle_pelicula">
+    tools:context=".DetallePelicula">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,6 +40,12 @@
             android:text="Aqui la descripcion de la pelicula"
             android:textColor="@color/yellow"
             android:gravity="center"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/yellow"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="32dp"/>
 
         <Button
             android:id="@+id/buyTickets"
@@ -61,6 +67,5 @@
             android:textSize="14sp"
             android:layout_gravity="center"
             android:textColor="@color/yellow"/>
-
     </LinearLayout>
 </LinearLayout>
